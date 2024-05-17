@@ -2,7 +2,7 @@ import { FastifyPluginCallback, RouteHandlerMethod } from 'fastify';
 
 const register: FastifyPluginCallback = (server, options, done) => {
   const getStatus: RouteHandlerMethod = async (request, reply) => {
-    reply.status(200).send('API is live');
+    return reply.redirect('https://www.google.com');
   };
 
   const successSchema = {};
