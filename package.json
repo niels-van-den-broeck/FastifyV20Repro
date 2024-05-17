@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -e ts,json,env --exec ts-node --files -r dotenv/config src/index.ts",
+    "start": "nodemon -e ts,json,env --exec ts-node --files src/index.ts",
     "test": "LOG_LEVEL=error vitest run",
     "test:watch": "LOG_LEVEL=error vitest watch",
     "lint": "eslint ./src"

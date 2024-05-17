@@ -18,12 +18,14 @@ const sessions = new Map<string, Session>();
 
 let cancelled = false;
 
-server.addHook('onRequest', async (request, reply) => {
+server.addHook('onRequest', (request, reply, done) => {
   request.raw.on('close', () => {
     if (request.raw.aborted) {
       cancelled = true;
     }
   })
+
+  done();
 })
 
 server.register(fastifyCookie);
