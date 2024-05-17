@@ -2,7 +2,7 @@ import server from './server';
 
 server.listen(
   {
-    port: Number(process.env.PORT),
+    port: 3000,
     host: '0.0.0.0',
   },
   (err, address) => {
